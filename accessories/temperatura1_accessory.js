@@ -6,7 +6,7 @@ console.log("Connecting to MQTT broker...");
 var mqtt = require('mqtt');
 var options = {
   port: 1883,
-  host: '192.168.0.67',
+  host: '192.168.1.125',
   clientId: 'Temperatura1'
 };
 var client = mqtt.connect(options);
@@ -54,5 +54,8 @@ setInterval(function() {
   sensor
     .getService(Service.TemperatureSensor)
     .setCharacteristic(Characteristic.CurrentTemperature,Temperature);
+    .setCharacteristic(Characteristic.Manufacturer, "Pedro M")
+    .setCharacteristic(Characteristic.Model, "Ver1.1")
+    .setCharacteristic(Characteristic.SerialNumber, "00001");
   
 }, 5000);
