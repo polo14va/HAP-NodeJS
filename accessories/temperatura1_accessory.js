@@ -54,8 +54,5 @@ setInterval(function() {
   sensor
     .getService(Service.TemperatureSensor)
     .setCharacteristic(Characteristic.CurrentTemperature,Temperature);
-    .setCharacteristic(Characteristic.Manufacturer, "Pedro M")
-    .setCharacteristic(Characteristic.Model, "Ver1.1")
-    .setCharacteristic(Characteristic.SerialNumber, "00001");
   
 }, 5000);
