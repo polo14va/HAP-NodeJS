@@ -3,7 +3,7 @@ console.log("Connecting to MQTT broker...");
 var mqtt = require('mqtt');
 var options = {
   port: 1883,
-  host: '192.168.0.56',
+  host: '192.168.1.125',
   clientId: 'Light1'
 };
 var client = mqtt.connect(options);
